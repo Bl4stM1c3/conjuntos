@@ -1,0 +1,14 @@
+#Solucion al problema 23 de https://retosdeprogramacion.com/ejercicios/
+#Crea una función que reciba dos array, un booleano y retorne un array.
+#Si el booleano es verdadero buscará y retornará los elementos comunes
+#de los dos array.
+#Si el booleano es falso buscará y retornará los elementos no comunes
+#de los dos array.
+#No se pueden utilizar operaciones del lenguaje que
+#lo resuelvan directamente.
+
+def conjuntos(array1, array2, booleano):
+    if booleano:
+        return [c for c in array1 if c in array2]
+    else:
+        return [c for c in array1 if c not in array2] + [c for c in array2 if c not in array1]
